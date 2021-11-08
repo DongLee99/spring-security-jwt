@@ -29,7 +29,9 @@ public class TokenProvider implements InitializingBean {
 
     private static final String AUTHORITIES_KEY = "auth";
 
+    @Value("${jwt.secret}")
     private final String secret;
+
     private final long tokenValidityInMilliseconds;
 
     private Key key;
